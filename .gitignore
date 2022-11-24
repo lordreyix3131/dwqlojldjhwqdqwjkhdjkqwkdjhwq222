@@ -107,7 +107,7 @@ local data = game.Players:GetPlayers()
 function noob(player)
     local character
     repeat wait() until player.Character
-    local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(84, 132, 153), 0.3, 3)
+    local handler = makemarker(guimain, player.Character:WaitForChild(SelectedPart), Color3.fromRGB(255, 255, 255), 0.3, 3)
     handler.Name = player.Name
     player.CharacterAdded:connect(function(Char) handler.Adornee = Char:WaitForChild(SelectedPart) end)
 
@@ -144,7 +144,7 @@ spawn(function()
     placemarker.Transparency = 1
     end
     if Settings.lockwth.showdot then
-    makemarker(placemarker, placemarker, Color3.fromRGB(84, 132, 153), 0.80, 0)
+    makemarker(placemarker, placemarker, Color3.fromRGB(255, 255, 255), 0.80, 0)
     end
 end)
 
@@ -156,8 +156,8 @@ game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
                 Plr = getClosestPlayerToCursor()
             game.StarterGui:SetCore("SendNotification", {
                 Title = "cupid";
-                Text = "beated",
-                Icon = "http://www.roblox.com/asset/?id=11571934216",
+                Text = "unlocked",
+                Icon = "",
                 Duration = 3
             })
         end
@@ -168,8 +168,8 @@ game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
 
                 game.StarterGui:SetCore("SendNotification", {
                     Title = "cupid";
-                    Text = "beating: "..tostring(Plr.Character.Humanoid.DisplayName),
-                    Icon = "http://www.roblox.com/asset/?id=11571934216",
+                    Text = "locked: "..tostring(Plr.Character.Humanoid.DisplayName),
+                    Icon = "",
                     Duration = 3
                 })
 
